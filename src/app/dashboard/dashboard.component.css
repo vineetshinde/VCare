@@ -1,0 +1,19 @@
+.logout-icon {
+    padding: 0 14px;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  .stat-cards{
+      margin-top: 30px;
+      margin-bottom: 30px;
+  }
+  .pie-card{
+    margin-top: 30px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  

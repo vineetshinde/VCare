@@ -1,0 +1,27 @@
+
+<div class="loginForm" fxLayoutAlign="center center" >
+    <mat-card class="loginCard" fxFlex="25" >
+        <mat-card-title>Login</mat-card-title>
+        <mat-divider></mat-divider>
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" fxLayoutAlign="stretch" fxLayout="column">
+            
+                <mat-form-field>
+                    
+                    <mat-label for="username">Username</mat-label>
+                    <input matInput ngModel name="username" id ="username" type="text" class="form-control" required/>
+                    <mat-error>This field is mandatory</mat-error>
+                </mat-form-field>
+           
+                <mat-form-field>
+                    <mat-label for="password">Password</mat-label>
+                    <input matInput ngModel name="password" id ="password" type="password" class="form-control" required/>
+                    <mat-error>This field is mandatory</mat-error>
+                </mat-form-field>
+            
+            <button mat-raised-button color="primary">LogIn</button>
+        </form>
+    </mat-card>
+</div>
+
+
+

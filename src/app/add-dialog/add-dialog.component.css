@@ -1,0 +1,6 @@
+.controlers-container  > *{
+    width : 100%;
+}
+mat-radio-group mat-radio-button{
+    padding-left: 5px;
+}

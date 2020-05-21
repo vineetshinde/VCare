@@ -1,0 +1,43 @@
+<form [formGroup]= "this.form" class="add-form" (ngSubmit)="onSubmit()">
+    <mat-grid-list cols="2" rowHeight="300px" [gutterSize]="'15px'">
+        <mat-grid-tile>
+            <div class="controlers-container">
+                <input hidden formControlName="id" />
+                <mat-form-field>
+                    <input formControlName="name" matInput placeholder="Name*"> 
+                    <mat-error>This field is mandatory</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="email" matInput placeholder="Email*">
+                    <mat-error>Invalid Email address</mat-error> 
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="phone" matInput placeholder="mobile"> 
+                    <mat-error *ngIf="this.form.controls['phone'].errors?.required">This field is mandatory</mat-error>
+                    <mat-error *ngIf="this.form.controls['phone'].errors?.minLength">Invalid input</mat-error>
+                    
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="address" matInput placeholder="address"> 
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="controlers-container">
+                <label>Gender</label>
+                <mat-radio-group formControlName="gender" >
+                    <mat-radio-button value="1">Male</mat-radio-button>
+                     <mat-radio-button value="2">Female</mat-radio-button>
+                </mat-radio-group>
+                <mat-form-field>
+                    <input type=number formControlName="age" matInput placeholder="age"> 
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="disease" matInput placeholder="Disease*"> 
+                    <mat-error>This field is mandatory</mat-error>
+                </mat-form-field>
+                <button mat-raised-button color="primary" type="submit" [disabled]="this.form.invalid">Submit</button>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</form> 
